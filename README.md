@@ -1,3 +1,4 @@
+![Cover](https://raw.githubusercontent.com/Kaike-Vitorino/Tetris-Py/main/Artes/Tetris-Py%20Background.png)
 # Tetris em Python
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
