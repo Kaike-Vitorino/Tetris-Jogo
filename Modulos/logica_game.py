@@ -1,4 +1,4 @@
-import pygame
+#import pygame
 from Grade import *
 from Blocos_Formatos import *
 import random
@@ -60,14 +60,13 @@ class Jogo:
 
     def travar_bloco(self):
         # Travar o bloco atual na grade
-        azulejos = self.bloco_atual.get_posicoes_celula()
+        azulejos = self.bloco_atual.pegar_posicoes_celula()
         for posicao in azulejos:
             self.grade.grade[posicao.linha][posicao.coluna] = self.bloco_atual.id
         self.bloco_atual = self.proximo_bloco
         self.proximo_bloco = self.get_bloco_aleatorio()
         linhas_completas = self.grade.limpar_linhas_completas()
         if linhas_completas > 0:
-            self.som_limpar.play()
             self.atualizar_pontuacao(linhas_completas, 0)
         if self.bloco_cabe() == False:
             self.jogo_acabou = True
@@ -82,7 +81,7 @@ class Jogo:
 
     def bloco_cabe(self):
         # Verificar se o bloco cabe na grade
-        azulejos = self.bloco_atual.get_posicoes_celula()
+        azulejos = self.bloco_atual.pegar_posicoes_celula()
         for azulejo in azulejos:
             if self.grade.esta_vazia(azulejo.linha, azulejo.coluna) == False:
                 return False
@@ -93,12 +92,13 @@ class Jogo:
         self.bloco_atual.rotacionar()
         if self.bloco_dentro() == False or self.bloco_cabe() == False:
             self.bloco_atual.desfazer_rotacao()
-        else:
-            self.som_rotacao.play()
+        #else:
+            #self.som_rotacao.play()
+            #pass
 
     def bloco_dentro(self):
-        # Verificar se todas as células do bloco estão dentro da grade
-        azulejos = self.bloco_atual.get_posicoes_celula()
+        # Verifica se todas as células do bloco estão dentro da grade
+        azulejos = self.bloco_atual.pegar_posicoes_celula()
         for azulejo in azulejos:
             if self.grade.esta_dentro(azulejo.linha, azulejo.coluna) == False:
                 return False
