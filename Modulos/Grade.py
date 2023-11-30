@@ -1,5 +1,5 @@
 import pygame
-import random
+from Bloco_Unitario import *
 
 # Importa a classe Cores para obter as cores das células
 class Grade:
@@ -11,7 +11,7 @@ class Grade:
         # Cria uma matriz para representar a grade, preenchida com zeros
         self.grade = [[0 for j in range(self.num_colunas)] for i in range(self.num_linhas)]
         # Obtém as cores das células da classe Cores
-        self.cores = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+        self.cores = Cores.obter_cor_celula()
 
     # Imprime o estado atual da grade
     def imprimir_grade(self):
@@ -76,4 +76,5 @@ class Grade:
                 retangulo_celula = pygame.Rect(coluna * self.tamanho_celula + 11, linha * self.tamanho_celula + 11,
                                                self.tamanho_celula - 1, self.tamanho_celula - 1)
                 # Desenha o retângulo colorido na tela
-                pygame.draw.rect(tela, self.cores, retangulo_celula)
+                pygame.draw.rect(tela, self.cores[valor_celula], retangulo_celula)
+

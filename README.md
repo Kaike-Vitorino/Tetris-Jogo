@@ -11,16 +11,28 @@ Bem-vindo ao meu projeto Tetris em Python! Este repositório contém a implement
 
 ## Como Jogar
 
-1. Quando o jogo estiver terminado, vai ter o passo a passo aqui.
+1. **Clone o Repositório:**
+   ```bash
+   git clone https://github.com/Kaike-Vitorino/Tetris-Py.git
+   ```
 
-## Contribuições
+2. **Navegue até o Diretório do Projeto:**
+   ```bash
+   cd Tetris-Py
+   ```
 
-Contribuições são bem-vindas! Se você tem ideias para melhorar o jogo, corrigir bugs, adicionar novas funcionalidades ou me apresentar novas tecnologias interessantes, sinta-se à vontade para abrir uma issue, enviar um pull request ou mesmo se contatar comigo.
+3. **Navegue até o Diretório dos modulos:**
+   ```bash
+   cd Modulos
+   ```
+
+4. **De run no arquivo Main.py:**
+   ```bash
+   python Main.py
+   ```
 
 ## Licença
 
-Este projeto é licenciado sob a [MIT License](LICENSE), garantindo a liberdade para usar, modificar e distribuir o código.
+Este projeto está sob a Licença Pública Geral GNU Versão 3 - veja o arquivo [LICENSE](LICENSE.md) para detalhes.
 
----
-
-Divirta-se jogando Tetris em Python! 🎮✨
+### Divirta-se jogando Tetris em Python! 🎮✨
